@@ -14,7 +14,42 @@ $("#currentTime").text(time.format('hh:mm:ss'));
 ,1000)
 
 
-localStoarge.setItems
+
+
+
+
+
+
+//LOCAL STORAGE
+//my localStorage funtion, call and listenter
+
+const input = document.querySelector("input"),
+      h2 = document.querySelector("h2");
+
+h2.innerHTML = localStorage.getItem("value");
+
+input.addEventListener("keyup", display);
+
+//The Function
+function display() {
+  //error here:
+  // localStoarge.setItem("value", input.value);
+  console.log(localStorage.getItem("value"));
+
+  h2.innerHTML = localStorage.getItem("value");
+}
+
+function removeItem(){
+  localStoarge.removeItem('keyName');
+}
+
+function clear(){
+localStorage.clear('keyName');
+}
+
+
+
+
 // https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 
 
