@@ -63,7 +63,7 @@ $("textarea").text(localStorage.getItem("9am"))
 
 
 //moment setting the 9am - 5pm time blocks. Past (grey), Present (orange), Furture (green). 
-//Note: copy paste when 9am is working
+//Note: copy paste when 9am is working, parse
 
 
 var currentHour = dayjs().hour()
