@@ -2,16 +2,19 @@
 
 
 //Note: From version 2.25.0 you can only pass a formats argument, it could be an object of strings and functions:
-let calendar = moment("01/20/23");
-$("#currentDay").text(calendar.format('dddd, MMMM Do, YYYY'));
+// let calendar = moment("01/20/23");
 
-let currentDay = document.querySelector("#currentDay");
+$("#currentDay").text(dayjs().format("dddd, MMMM D, YYYY"));
+
+$("#currentTime").text(dayjs().format("h:mm:ss A"));
+
+
 
 //The current time:
-setInterval(function(){let time = moment();
-$("#currentTime").text(time.format('hh:mm:ss'));
-}
-,1000)
+// setInterval(function(){let time = moment();
+// $("#currentTime").text(time.format('hh:mm:ss'));
+// }
+// ,1000)
 
 
 
@@ -62,9 +65,29 @@ $("textarea").text(localStorage.getItem("9am"))
 //moment setting the 9am - 5pm time blocks. Past (grey), Present (orange), Furture (green). 
 //Note: copy paste when 9am is working
 
-moment().format("h")
 
-$("textarea").addClass("future")
+var currentHour = dayjs().hour()
+console.log(currentHour);
+
+$(".time-block").each(function(){
+
+    var dayPlannerHr = parseInt($(this).attr("id"))
+    if (dayPlannerHr < currentHour) {
+       $(this).addClass("past")
+    }
+    else if(dayPlannerHr === currentHour){
+        $(this).removeClass("past")
+        $(this).addClass("present")
+    }
+    else{
+        $(this).removeClass("past")
+        $(this).removeClass("present")
+        $(this).addClass("future")
+    }
+})
+
+
+// $("textarea").addClass("future")
 
 
 // localStorage.setItem("9am")
