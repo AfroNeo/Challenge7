@@ -48,10 +48,10 @@ $("#currentTime").text(time.format('hh:mm:ss'));
 // localStorage.clear('keyName');
 // }
 
-//............................................................................//
+//....................................................................May have over complicated it above with my 1st attempt........//
 //local storage attempt 2. this time using textarea
 
-// localStorage.setItem("9am")
+// localStorage.setItem("9am") Is this all I need in terms of functionality below?? ...Before replicating (will try to avoid a For Loop, there is another way)
 
 localStorage.getItem("9am")
 
