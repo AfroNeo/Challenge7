@@ -141,12 +141,14 @@ WRITE HERE WHAT I NEED - PLAN AHEAD!
     <!-- just added this js -->
     <!-- <script scr="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> -->
 
-    
+
     <!--Button functionality.-->
     <script>
       $("button").on("click", function(event){
 
-        console.log($(event.target).siblings("textarea").val())
+        console.log($(event.target).siblings("textarea").val());
+
+        console.log($(event.target).attr("data-time"));
 
 
       })
