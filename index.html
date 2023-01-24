@@ -80,10 +80,11 @@ WRITE HERE WHAT I NEED - PLAN AHEAD!
 
 
 <!-- Timeblocks go here -->
+<!--Valuable Lesson. I need to understand how all this code is linked, branched off and why it functions-->
 <div class="container">
   <div class="row">
-    <textarea class="col-8" data-time="10am"></textarea>
-    <button data-time="9am"><i class="far fa-save"></i></button>
+    <textarea class="col-8" data-time="9am"></textarea>
+    <button data-time="9am"><i class="far fa-save"></i>  Save to 9am</button>
     <!-- above just got the button from Awesome Fonts for Free. <i class="far fa-save"></i>  -->
     
 <!-- <h2 ="localStorage.getItem('notes');"></h2> -->
@@ -124,6 +125,8 @@ WRITE HERE WHAT I NEED - PLAN AHEAD!
 </div> -->
 
 
+<!-- All my Scripts below -->
+
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"
     integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     
@@ -138,6 +141,20 @@ WRITE HERE WHAT I NEED - PLAN AHEAD!
     <!-- just added this js -->
     <!-- <script scr="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> -->
 
+
+    <script>
+      $("button").on("click", function(event){
+
+        console.log($(event.target))
+
+
+      })
+    </script>
+
     <script src="./script.js"></script>
+
+
+
+
   </body>
 </html>

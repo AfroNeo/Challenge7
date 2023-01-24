@@ -51,7 +51,7 @@ $("#currentTime").text(time.format('hh:mm:ss'));
 //............................................................................//
 //local storage attempt 2. this time using textarea
 
-localStorage.setItem("9am")
+// localStorage.setItem("9am")
 
 localStorage.getItem("9am")
 
@@ -59,6 +59,15 @@ $("textarea")
 $("textarea").text(localStorage.getItem("9am"))
 
 
+//moment setting the 9am - 5pm time blocks. Past (grey), Present (orange), Furture (green). 
+//Note: copy paste when 9am is working
+
+moment().format("h")
+
+$("textarea").addClass("future")
+
+
+// localStorage.setItem("9am")
 
 
 
